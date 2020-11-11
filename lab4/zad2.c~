@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <sys/types.h>
+#include <signal.h>
+#include <unistd.h>
+
+void catch_ctlc( int sig_num )
+{
+  printf( "To jest ten sygnal!\n");
+}
+void catch_ctle(int sig_num)
+{
+  printf("Oj tak byczq +1\n");
+}
+
+int main()
+{
+
+  signal(SIGTERM, catch_ctlc);
+  signal(SIGKILL,catch_ctle);
+    while (1)
+      {
+        printf("Dzialam dalej...\n");
+        sleep(1);
+      }
+    
+    return 0;
+}
