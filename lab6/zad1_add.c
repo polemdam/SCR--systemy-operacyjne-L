@@ -8,7 +8,7 @@
 int main(){
 
 	char nazwa_pliku[64];
-	char text_path[] = "./wiadomosc2.txt";
+	char text_path[] = "./wiadomosc_map.txt";
 	int plik_1;
 	int plik_2;
 	struct stat status_pliku;
